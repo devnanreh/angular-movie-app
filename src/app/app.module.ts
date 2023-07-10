@@ -5,6 +5,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { MatButtonModule } from "@angular/material/button";
 
 import { MovieComponent } from "./components/movie/movie.component";
 
@@ -16,6 +17,7 @@ import { MovieComponent } from "./components/movie/movie.component";
     HttpClientModule,
     MatCardModule,
     MatGridListModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -18,7 +18,7 @@
     </mat-card-content>
   </mat-card> -->
 
-<ul class="cards">
+<!-- <ul class="cards">
   <li class="cards_item" *ngFor="let movie of movies">
     <div class="card">
       <div class="card_image">
@@ -37,25 +37,55 @@
       </div>
     </div>
   </li>
-</ul>
+</ul> -->
 
 <!-- <div class="container">
-  <mat-card class="card" id="{{ movie.id }}" *ngFor="let movie of movies">
-    <div class="card_image">
-      <img
-        mat-card-image
-        src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
-        alt="{{ movie.title }}"
-      />
+  <mat-card id="{{ movie.id }}" class="card" *ngFor="let movie of movies">
+    <img
+      class="card_image"
+      src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
+      alt="{{ movie.title }}"
+    />
+    <div>
+      <mat-card-content>
+        <mat-card-title class="card_title">{{ movie.title }}</mat-card-title>
+        <mat-card-subtitle class="card_text">{{
+          movie.release_date | date : "YYYY"
+        }}</mat-card-subtitle>
+      </mat-card-content>
+      <mat-card-footer>
+        <mat-card-actions>
+          <button mat-raised-button color="accent">Show more...</button>
+        </mat-card-actions>
+      </mat-card-footer>
     </div>
-    <mat-card-content class="card_content">
-      <mat-card-title class="card_title">{{ movie.title }}</mat-card-title>
-      <mat-card-subtitle
-        >Release date: {{ movie.release_date }}</mat-card-subtitle
-      >
-      <p class="card_text">
-        {{ movie.overview }}
-      </p>
-    </mat-card-content>
   </mat-card>
 </div> -->
+
+<ul class="container">
+  <li class="card" *ngFor="let movie of movies">
+    <div id="{{ movie.id }}">
+      <div style="height: 350px">
+        <img
+          class="card_image"
+          src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
+          alt="{{ movie.title }}"
+        />
+      </div>
+
+      <div class="carta_contenido">
+        <mat-card-content>
+          <mat-card-title class="card_title">{{ movie.title }}</mat-card-title>
+          <mat-card-subtitle class="card_text">{{
+            movie.release_date | date : "YYYY"
+          }}</mat-card-subtitle>
+        </mat-card-content>
+        <mat-card-footer>
+          <mat-card-actions>
+            <button mat-raised-button color="accent">Show more...</button>
+          </mat-card-actions>
+        </mat-card-footer>
+      </div>
+    </div>
+  </li>
+</ul>
