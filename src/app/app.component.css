@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-.main {
-  max-width: 1200px;
-  margin: auto;
-}
-
 h1 {
   font-size: 30px;
   font-weight: 400;

@@ -1,0 +1,86 @@
+.container_details {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.blur {
+  backdrop-filter: blur(10px); /* blur effect to the backdrop */
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.movie_wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.movie_poster {
+  display: flex;
+}
+
+.movie_poster img {
+  width: 300px;
+  height: 500px;
+}
+
+.movie_info {
+  background-color: #d4d8e8;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+.movie_title h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.movie_title span {
+  font-size: 16px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.movie_overview h3 {
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.movie_overview p {
+  font-size: 22px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.genre {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.genre button {
+  background: linear-gradient(to right, #29487d, #3c5898);
+  background-color: #29487d;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  padding: 5px 15px;
+  border: 0px solid #000;
+  border-radius: 10px;
+  display: inline-block;
+}

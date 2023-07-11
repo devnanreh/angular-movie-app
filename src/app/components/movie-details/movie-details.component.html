@@ -1,4 +1,4 @@
-<h1>movie-details works!</h1>
+<!-- <h1>movie-details works!</h1>
 
 <div *ngIf="!movie"><h1>Aun no carga</h1></div>
 
@@ -8,4 +8,43 @@
     src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
     alt="{{ movie.title }}"
   />
-</div>
+</div> -->
+<div *ngIf="!movie"><h1>Aun no carga</h1></div>
+
+<section
+  *ngIf="movie"
+  class="container_details"
+  style="background-image: url('https://image.tmdb.org/t/p/original{{movie.poster_path}}')"
+>
+  <div class="blur">
+    <div class="movie_wrapper">
+      <div class="movie_poster">
+        <img
+          src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}"
+          alt="{{ movie.title }}"
+        />
+      </div>
+      <div class="movie_info">
+        <div class="movie_title">
+          <h1>
+            {{ movie.title }}
+            <span>({{ movie.release_date | date : "YYYY" }})</span>
+          </h1>
+          <span>Release: {{ movie.release_date | date : "mediumDate" }}</span> -
+          <span>Language: {{ movie.original_language }}</span>
+        </div>
+
+        <div class="movie_overview">
+          <h3 class="movie_subtitle">Overview</h3>
+          <p>{{ movie.overview }}</p>
+        </div>
+
+        <div class="genre">
+          <button class="" *ngFor="let genre of movie.genres">
+            <span>{{ genre.name }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
