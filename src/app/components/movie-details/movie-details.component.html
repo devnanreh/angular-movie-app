@@ -1,1 +1,11 @@
-<p>movie-details works!</p>
+<h1>movie-details works!</h1>
+
+<div *ngIf="!movie"><h1>Aun no carga</h1></div>
+
+<div *ngIf="movie">
+  <h1>{{ movie.title }}</h1>
+  <img
+    src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
+    alt="{{ movie.title }}"
+  />
+</div>

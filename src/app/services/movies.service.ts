@@ -15,4 +15,10 @@ export class MoviesService {
       `https://api.themoviedb.org/3/movie/popular?api_key=${this.apiKey}`
     );
   }
+
+  getMovieById(id: number): Observable<any> {
+    return this.http.get(
+      `https://api.themoviedb.org/3/movie/${id}?api_key=${this.apiKey}`
+    );
+  }
 }
