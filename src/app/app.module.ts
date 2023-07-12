@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { MovieComponent } from "./components/movie/movie.component";
 import { MovieDetailsComponent } from "./components/movie-details/movie-details.component";
 import { HomeComponent } from "./components/home/home.component";
+import { HeaderComponent } from "./components/header/header.component";
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { HomeComponent } from "./components/home/home.component";
     HomeComponent,
     MovieComponent,
     MovieDetailsComponent,
+    HeaderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
