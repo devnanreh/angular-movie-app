@@ -8,6 +8,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { FormsModule } from "@angular/forms";
 import { SearchComponent } from "./components/search/search.component";
+import { ShadowOnHover } from "./directives/shadow-on-hover.directive";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SearchComponent } from "./components/search/search.component";
     MovieDetailsComponent,
     HeaderComponent,
     SearchComponent,
+    ShadowOnHover,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

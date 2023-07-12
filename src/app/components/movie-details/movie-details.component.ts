@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
+import { Movie } from "src/app/models/movie";
 import { MoviesService } from "src/app/services/movies.service";
 
 @Component({
@@ -8,7 +9,7 @@ import { MoviesService } from "src/app/services/movies.service";
   styleUrls: ["./movie-details.component.css"],
 })
 export class MovieDetailsComponent implements OnInit {
-  movie!: any;
+  movie!: Movie;
 
   constructor(
     private movieService: MoviesService,

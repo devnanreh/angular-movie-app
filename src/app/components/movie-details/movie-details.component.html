@@ -3,7 +3,10 @@
 <section
   *ngIf="movie"
   class="container_details"
-  style="background-image: url('https://image.tmdb.org/t/p/original{{ movie.poster_path}}')"
+  [ngStyle]="{
+    'background-image':
+      'url(https://image.tmdb.org/t/p/original' + movie.poster_path + ')'
+  }"
 >
   <div class="blur">
     <div class="movie_wrapper">
@@ -21,7 +24,7 @@
           </h1>
           <span
             >Release: {{ movie.release_date | date : "mediumDate" }} ({{
-              movie.original_language
+              movie.original_language | uppercase
             }})</span
           >
           -
