@@ -7,15 +7,15 @@ import { MovieDetailsComponent } from "./components/movie-details/movie-details.
 import { HomeComponent } from "./components/home/home.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { FormsModule } from "@angular/forms";
-import { MovieSearchComponent } from "./components/movies-search/movies-search.component";
+import { SearchComponent } from "./components/search/search.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MovieDetailsComponent,
-    MovieSearchComponent,
     HeaderComponent,
+    SearchComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
