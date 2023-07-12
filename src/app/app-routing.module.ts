@@ -1,4 +1,4 @@
-import { Component, NgModule } from "@angular/core";
+import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { HomeComponent } from "./components/home/home.component";
 import { MovieDetailsComponent } from "./components/movie-details/movie-details.component";
@@ -6,6 +6,11 @@ import { MovieDetailsComponent } from "./components/movie-details/movie-details.
 const routes: Routes = [
   {
     path: "",
+    pathMatch: "full",
+    redirectTo: "home",
+  },
+  {
+    path: "home",
     component: HomeComponent,
   },
   {

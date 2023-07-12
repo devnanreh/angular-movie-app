@@ -21,13 +21,13 @@
 
 .card img {
   width: 100%;
-  height: auto;
+  height: 420px;
 }
 
 .card-content {
   padding: 10px;
   overflow: auto;
-  max-height: 150px; /* Establece la altura máxima deseada */
+  max-height: 150px;
   text-align: center;
 }
 
@@ -56,14 +56,12 @@
 }
 
 .card-footer {
-  /* background-color: #f9f9f9; */
   padding: 10px;
   text-align: center;
 }
 
 .card_footer button {
-  background: linear-gradient(to right, #29487d, #3c5898);
-  background-color: #29487d;
+  background-color: #4654e1;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -72,7 +70,59 @@
   padding: 5px 15px;
   margin: 10px auto;
   border: 0px solid #000;
-  border-radius: 10px;
+  border-radius: 5px;
   display: inline-block;
   cursor: pointer;
 }
+
+/* Search bar */
+.search_bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.search_bar form {
+  background-color: #4654e1;
+  width: 300px;
+  height: 44px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search_bar input {
+  all: unset;
+  font: 16px system-ui;
+  height: 100%;
+  width: 100%;
+  padding: 6px 10px;
+}
+
+.search_bar ::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.search_bar input:focus {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.search_bar svg {
+  color: #fff;
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+}
+
+.search_bar button {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+/* Searchbar */

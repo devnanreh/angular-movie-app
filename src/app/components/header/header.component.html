@@ -2,13 +2,13 @@
   <form role="search" id="form">
     <input
       type="search"
-      id="query"
-      name="q"
+      class="form-control"
       placeholder="Search movie..."
-      aria-label="Search through site content"
-      value=""
+      autofocus
+      #movieTitle
+      (keyup.enter)="onSubmitSearchMovie(movieTitle.value)"
     />
-    <button>
+    <button (click)="onSubmitSearchMovie(movieTitle.value)">
       <svg viewBox="0 0 1024 1024">
         <path
           class="path1"

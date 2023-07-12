@@ -21,4 +21,10 @@ export class MoviesService {
       `https://api.themoviedb.org/3/movie/${id}?api_key=${this.apiKey}`
     );
   }
+
+  searchMovieByTitle(title: string): Observable<any> {
+    return this.http.get(
+      `https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query={${title}}}`
+    );
+  }
 }

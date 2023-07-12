@@ -8,7 +8,7 @@
 }
 
 .blur {
-  backdrop-filter: blur(10px); /* blur effect to the backdrop */
+  backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.2);
   height: 100vh;
   width: 100%;
@@ -72,8 +72,7 @@
 }
 
 .genre button {
-  background: linear-gradient(to right, #29487d, #3c5898);
-  background-color: #29487d;
+  background-color: #3745c2;
   color: #fff;
   font-size: 15px;
   font-weight: 500;
@@ -81,6 +80,6 @@
   text-decoration: none;
   padding: 5px 15px;
   border: 0px solid #000;
-  border-radius: 10px;
+  border-radius: 5px;
   display: inline-block;
 }
