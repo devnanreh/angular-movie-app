@@ -3,22 +3,7 @@
 </app-header>
 
 <ul class="cards_container">
-  <li
-    class="card"
-    id="{{ movie.id }}"
-    *ngFor="let movie of movies"
-    shadowOnHover
-  >
-    <img
-      src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
-      alt="{{ movie.title }}"
-    />
-    <div class="card-content">
-      <h3 class="card_title">{{ movie.title }}</h3>
-      <p class="card_subtitle">{{ movie.release_date | date : "YYYY" }}</p>
-      <div class="card_footer">
-        <button routerLink="/details/{{ movie.id }}">Details</button>
-      </div>
-    </div>
-  </li>
+  <ng-container *ngFor="let movie of movies">
+    <app-movie-card [movie]="movie"></app-movie-card>
+  </ng-container>
 </ul>
