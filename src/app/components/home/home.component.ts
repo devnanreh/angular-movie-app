@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { Movie } from "src/app/models/movie";
 import { MoviesService } from "src/app/services/movies.service";
 
 @Component({
@@ -8,28 +8,22 @@ import { MoviesService } from "src/app/services/movies.service";
   styleUrls: ["./home.component.css"],
 })
 export class HomeComponent implements OnInit {
-  movies: any = [];
+  movies!: Movie[];
 
-  numero: number = 0;
-  resultado: number = 0;
-
-  constructor(
-    private movieService: MoviesService,
-    private activateRoute: ActivatedRoute
-  ) {}
+  constructor(private movieService: MoviesService) {}
 
   ngOnInit() {
-    this.movieService.getPopularMovies().subscribe((data: any) => {
-      this.movies = data.results;
+    this.movieService.getPopularMovies().subscribe((data) => {
+      this.movies = data?.results;
     });
   }
 
   searchMovie(title: string) {
-    this.movieService.searchMovieByTitle(title).subscribe((data: any) => {
-      if (data.results.length === 0) {
+    this.movieService.searchMoviesByTitle(title).subscribe((data) => {
+      if (data?.results?.length === 0) {
         alert("No se encontraron resultados");
       } else {
-        this.movies = data.results;
+        this.movies = data?.results;
       }
     });
   }
