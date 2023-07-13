@@ -13,18 +13,24 @@ export class HomeComponent implements OnInit {
   constructor(private movieService: MoviesService) {}
 
   ngOnInit() {
-    this.movieService.getPopularMovies().subscribe((data) => {
-      this.movies = data?.results;
+    this.movieService.getPopularMovies().subscribe({
+      next: (data) => {
+        this.movies = data?.results;
+      },
+      error: () => {},
     });
   }
 
   searchMovie(title: string) {
-    this.movieService.searchMoviesByTitle(title).subscribe((data) => {
-      if (data?.results?.length === 0) {
-        alert("No se encontraron resultados");
-      } else {
-        this.movies = data?.results;
-      }
+    this.movieService.searchMoviesByTitle(title).subscribe({
+      next: (data) => {
+        if (data?.results?.length === 0) {
+          alert("No se encontraron resultados");
+        } else {
+          this.movies = data?.results;
+        }
+      },
+      error: () => {},
     });
   }
 }

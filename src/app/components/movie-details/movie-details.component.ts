@@ -18,8 +18,11 @@ export class MovieDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activateRoute.params.subscribe((params: any) => {
-      this.movieService.getMovieById(params.movieId).subscribe((resp) => {
-        this.movie = resp;
+      this.movieService.getMovieById(params.movieId).subscribe({
+        next: (resp) => {
+          this.movie = resp;
+        },
+        error: () => {},
       });
     });
   }
